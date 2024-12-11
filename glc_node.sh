@@ -50,14 +50,14 @@ function run_wibucrypto_validator() {
     fi
 
     # Pull Docker image
-    echo "Pulling the latest Docker image for glaciernetwork/glacier-verifier:v0.0.1..."
-    docker pull docker.io/glaciernetwork/glacier-verifier:v0.0.1
+    echo "Pulling the latest Docker image for glaciernetwork/glacier-verifier:v0.0.3..."
+    docker pull docker.io/glaciernetwork/glacier-verifier:v0.0.3
 
     # Run Docker container
     docker run -d \
         -e PRIVATE_KEY=$YOUR_PRIVATE_KEY \
         --name glacier-verifier \
-        docker.io/glaciernetwork/glacier-verifier:v0.0.1
+        docker.io/glaciernetwork/glacier-verifier:v0.0.3
 
     echo "Glacier Verifier container started successfully with the provided private key."
 }
